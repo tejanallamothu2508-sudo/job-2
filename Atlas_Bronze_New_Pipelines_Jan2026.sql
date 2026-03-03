@@ -16,8 +16,8 @@
 -- =============================================================================
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_Participation_Billing_Regular', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_Participation_Billing_Regular', 'Atlas_Bronze_Participation_Billing_Regular', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -58,8 +58,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_Participation_Billing_Regular';
 -- =============================================================================
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_Participation_Billing_Accruals', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_Participation_Billing_Accruals', 'Atlas_Bronze_Participation_Billing_Accruals', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -95,8 +95,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_Participation_Billing_Accruals';
 -- =============================================================================
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_CDS_CII_Billing_Regular', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_CDS_CII_Billing_Regular', 'Atlas_Bronze_CDS_CII_Billing_Regular', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -132,8 +132,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_CDS_CII_Billing_Regular';
 -- =============================================================================
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_WAP_Canada_Discounts', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_WAP_Canada_Discounts', 'Atlas_Bronze_WAP_Canada_Discounts', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -171,8 +171,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_WAP_Canada_Discounts';
 -- =============================================================================
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_WAP_Billing', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_WAP_Billing', 'Atlas_Bronze_WAP_Billing', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -215,8 +215,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_WAP_Billing';
 
 -- 6. ZD5 CORE FLAT FEE CoCode 1000
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1000', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1000', 'Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1000', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -244,8 +244,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1000';
 
 -- 7. ZD5 CORE FLAT FEE CoCode 1460
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1460', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1460', 'Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1460', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -273,8 +273,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_ZRBINQ_Billing_Plans_CoCode_1460';
 
 -- 8. ZDJ GSMA FLAT FEE
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_GSMA', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_GSMA', 'Atlas_Bronze_ZRBINQ_Billing_Plans_GSMA', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -302,8 +302,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_ZRBINQ_Billing_Plans_GSMA';
 
 -- 9. ZDL HYBRID CoCode 1000
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1000', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1000', 'Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1000', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
@@ -331,8 +331,8 @@ WHERE p.pipeline_name = 'Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1000';
 
 -- 10. ZDL HYBRID CoCode 1460
 INSERT INTO development_011_bronze_core.db_admin.pipeline
-  (pipeline_name, created_date, modified_date)
-VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1460', current_date(), current_date());
+  (pipeline_name, pipeline_description, pipeline_enabled, created_date, modified_date)
+VALUES ('Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1460', 'Atlas_Bronze_ZRBINQ_Billing_Plans_Hybrid_1460', true, current_date(), current_date());
 
 INSERT INTO development_011_bronze_core.db_admin.pipeline_parameter (
   pipeline_id, variable_name, variable_value, created_date, modified_date
