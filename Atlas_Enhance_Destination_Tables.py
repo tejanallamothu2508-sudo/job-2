@@ -1,5 +1,10 @@
 # Databricks notebook source
-catalog_schema = "development_021_bronze_finance.atlas"
+try:
+    environment = dbutils.secrets.get(scope="workspace-details", key="name")
+except Exception:
+    environment = "development"
+spark.conf.set("sql.environment", environment)
+catalog_schema = f"{environment}_021_bronze_finance.atlas"
 
 tables = [
     "RPM_Performance_CDS_Class_II_ManualBilling",
@@ -20,6 +25,11 @@ tables = [
     "RPM_Intl_Performance_EMEA_GreeceWLA",
     "RPM_Intl_Performance_EMEA_Iceland",
     "RPM_Intl_Performance_LAC",
+    "RPM_Performance_PartPriorMonth",
+    "RPM_Performance_PartAccrualMonth",
+    "RPM_Performance_CDS_Class_II",
+    "RPM_Performance_WAP_NewCanada",
+    "RPM_Performance_WAP",
 ]
 
 results = []

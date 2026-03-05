@@ -1,5 +1,9 @@
 # Databricks notebook source
-environment = "development"
+try:
+    environment = dbutils.secrets.get(scope="workspace-details", key="name")
+except Exception:
+    environment = "development"
+spark.conf.set("sql.environment", environment)
 
 results = []
 
@@ -191,7 +195,7 @@ spark.sql(f"""
     ({pid}, 'workbook_path', 's3://cluster-private-bucket-481980074735-us-east-1/intake/atlas/manual/daily_fee_poker_install_base/December 2025 Action Poker Unit Count Data.xlsx', current_date(), current_date()),
     ({pid}, 'sheet_mapping', '[
   {{
-    "sheet_name": "December 2025",
+    "sheet_name": "",
     "header_rows_to_skip": 0,
     "footer_rows_to_skip": 0,
     "has_header_row": true,
@@ -290,7 +294,7 @@ spark.sql(f"""
     ({pid}, 'workbook_path', 's3://cluster-private-bucket-481980074735-us-east-1/intake/atlas/manual/flat_fee_billing/Hybris Billing File December 2025.xlsx', current_date(), current_date()),
     ({pid}, 'sheet_mapping', '[
   {{
-    "sheet_name": "Hybris Billing December 2025",
+    "sheet_name": "Hybris Billing",
     "header_rows_to_skip": 0,
     "footer_rows_to_skip": 0,
     "has_header_row": true,
@@ -351,7 +355,7 @@ spark.sql(f"""
     "destination_table": "development_021_bronze_finance.atlas.RPM_Peformance_PremLotto_RI"
   }},
   {{
-    "sheet_name": "Non-Premium_11_23 to 12_27",
+    "sheet_name": "Non-Premium",
     "header_rows_to_skip": 0,
     "footer_rows_to_skip": 0,
     "has_header_row": true,
@@ -384,7 +388,7 @@ spark.sql(f"""
     ({pid}, 'workbook_path', 's3://cluster-private-bucket-481980074735-us-east-1/intake/atlas/manual/africa_billing/12 Africa 3600 ZRBINQ.xlsx', current_date(), current_date()),
     ({pid}, 'sheet_mapping', '[
   {{
-    "sheet_name": "CC3600 ZRBINQ Dec''25",
+    "sheet_name": "CC3600 ZRBINQ",
     "header_rows_to_skip": 0,
     "footer_rows_to_skip": 0,
     "has_header_row": true,
@@ -483,7 +487,7 @@ spark.sql(f"""
     ({pid}, 'workbook_path', 's3://cluster-private-bucket-481980074735-us-east-1/intake/atlas/manual/iceland_billing/Oct 1stOfMonth_UIL.xlsx', current_date(), current_date()),
     ({pid}, 'sheet_mapping', '[
   {{
-    "sheet_name": "20251101",
+    "sheet_name": "",
     "header_rows_to_skip": 0,
     "footer_rows_to_skip": 0,
     "has_header_row": true,
